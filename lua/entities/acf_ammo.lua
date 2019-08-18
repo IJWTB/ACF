@@ -477,7 +477,7 @@ function ENT:Think()
 		else
 			if not (self.BulletData.Type == "Refill") then
 				if math.Rand(0,150) > self.BulletData.RoundVolume^0.5 and math.Rand(0,1) < self.Ammo/math.max(self.Capacity,1) and ACF.RoundTypes[self.BulletData.Type] then
-					self:EmitSound( "ambient/explosions/explode_4.wav", 350, math.max(255 - self.BulletData.PropMass*100,60)  )	
+					ACF.NetworkEntitySound( self, "ambient/explosions/explode_4.wav", 350, math.max(255 - self.BulletData.PropMass*100,60) )
 					local Speed = ACF_MuzzleVelocity( self.BulletData.PropMass, self.BulletData.ProjMass/2, self.Caliber )
 
 					self.BulletData.Pos = self:LocalToWorld(self:OBBCenter() + VectorRand()*(self:OBBMaxs()-self:OBBMins())/2)
@@ -516,7 +516,7 @@ function ENT:Think()
 						self.Ammo = self.Ammo - Transfert
 							
 						Ammo.Supplied = true
-						Ammo.Entity:EmitSound( "items/ammo_pickup.wav", 350, 80, 0.30 )
+						ACF.NetworkEntitySound( Ammo.Entity, "items/ammo_pickup.wav", 350, 80 )
 					end
 				end
 			end
