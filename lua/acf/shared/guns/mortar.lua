@@ -82,7 +82,6 @@ ACF_defineGun("200mmM", {
 	}
 } )
 
---[[
 ACF_defineGun("280mmM", {
 	name = "280mm Mortar",
 	desc = "Massive payload, with a reload time to match. Found in rare WW2 siege artillery pieces. It's the perfect size for a jeep.",
@@ -96,4 +95,3 @@ ACF_defineGun("280mmM", {
 		propweight = 0.462 
 	}
 } )
-]]--

@@ -81,7 +81,6 @@ ACF_defineGun("203mmHW", {
 	}
 } )
 
---[[
 ACF_defineGun("240mmHW", {
 	name = "240mm Howitzer",
 	desc = "A 9.4-inch deck gun, found on heavy siege artillery and cruisers.",
@@ -109,4 +108,3 @@ ACF_defineGun("290mmHW", {
 		propweight = 57.0
 	}
 } )
-]]--	
